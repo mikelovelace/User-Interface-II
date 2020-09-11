@@ -146,9 +146,9 @@ footer {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    padding: 10%;
+    padding: 6%;
     background: red;
-    margin: 5% 0;
+    margin: 5% 0 0;
 }
 
 footer h3 {
