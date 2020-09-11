@@ -125,7 +125,6 @@ section.info .right p {
 
 
 /* GALLERY START */
-
 section.gallery {
     display: flex;
     flex-flow: row wrap;
@@ -137,4 +136,29 @@ section.gallery .gallery-box {
     width: 270px;
     height: 220px;
     margin: 1%;
+}
+/* GALLERY END */
+
+
+/* FOOTER START */
+footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    background: red;
+    margin: 5% 0;
+}
+
+footer h3 {
+    font-size: 3rem;
+}
+
+footer a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 2% 6%;
+    margin: 2% 0 5%;
+    background: rgb(255, 94, 0);
 }
