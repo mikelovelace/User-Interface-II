@@ -15,10 +15,126 @@ time, mark, audio, video {
 margin: 0;  
 padding: 0;  
 border: 0;  
-font-size: 100%;  
 font: inherit;  
 vertical-align: baseline;  
 box-sizing: border-box;
 }
 /** CSS RESET END **/
 
+html {
+    font-size: 62.5%; /** set the base font-size to 10px **/ 
+}
+
+body {
+    background: #222222;
+    color: #eee;
+    font-family: "Poppins";
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER START */
+header {
+    display: flex;
+    flex-flow: column wrap;
+    background: red;
+    padding: 1%;
+}
+
+header .logo .logo-small-one , .logo-small-two {
+    font-family: "Oswald";
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+header .logo .logo-small-one {
+    font-weight: 300;
+}
+
+header .logo .logo-small-two {
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+/* NAVIGATION START */
+header nav a {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    padding: 10px 30px;
+    background: black;
+    text-decoration: none;
+    color: white;
+}
+
+header nav a:hover {
+    background: #222;
+}
+
+/* INFO SECTION START */
+.info {
+    display: flex;
+    width: 100%;
+}
+
+section.info .right {
+    display: flex;
+    flex-direction: column;
+    background: orange;
+    flex-grow: 1;
+    padding: 5%;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+section.info .left {
+    display: flex;
+    flex-direction: column;
+    background: orange;
+    flex-grow: 1;
+    padding: 5% 5% 5% 0;
+    align-items: center;
+    justify-content: center;
+}
+
+section.info .left img {
+    width: 600px;
+}
+
+.right h1 {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+section.info .right a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 4% 15%;
+    margin: 5% 0 5%;
+    background: rgb(255, 94, 0);
+}
+
+section.info .right p {
+    font-size: 1.5rem;
+}
+/* INFO SECTION END */
+
+
+/* GALLERY START */
+
+section.gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+section.gallery .gallery-box {
+    background: white;
+    width: 270px;
+    height: 220px;
+    margin: 1%;
+}
