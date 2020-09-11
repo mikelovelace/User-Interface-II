@@ -32,7 +32,6 @@ body {
 }
 
 .container {
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -40,8 +39,8 @@ body {
 header {
     display: flex;
     flex-flow: column wrap;
-    background: red;
-    padding: 1%;
+    background: #313131;
+    padding: 10px 20%;
 }
 
 header .logo .logo-small-one , .logo-small-two {
@@ -76,13 +75,13 @@ header nav a:hover {
 /* INFO SECTION START */
 .info {
     display: flex;
-    width: 100%;
+    padding: 1% 20%;
+    background: #1f1f1f;
 }
 
 section.info .right {
     display: flex;
     flex-direction: column;
-    background: orange;
     flex-grow: 1;
     padding: 5%;
     align-items: flex-start;
@@ -92,15 +91,13 @@ section.info .right {
 section.info .left {
     display: flex;
     flex-direction: column;
-    background: orange;
     flex-grow: 1;
     padding: 5% 5% 5% 0;
     align-items: center;
-    justify-content: center;
 }
 
 section.info .left img {
-    width: 600px;
+    width: 60vh;
 }
 
 .right h1 {
@@ -115,7 +112,7 @@ section.info .right a {
     text-decoration: none;
     padding: 4% 15%;
     margin: 5% 0 5%;
-    background: rgb(255, 94, 0);
+    background: #ff5e00;
 }
 
 section.info .right p {
@@ -129,17 +126,20 @@ section.gallery {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    padding: 10px 14% 50px;
+    background: #303030;
 }
 
 section.gallery .gallery-box {
     background: white;
     width: 270px;
     height: 220px;
-    margin: 5% 1% 2%;
+    margin: 50px 10px 0;
 }
 
 div.project-title p {
     text-align: center;
+    margin: 10px;
 }
 /* GALLERY END */
 
@@ -150,9 +150,8 @@ footer {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    padding: 6%;
-    background: red;
-    margin: 5% 0 0;
+    padding: 40px;
+    background: #1f1f1f;
 }
 
 footer h3 {
@@ -162,7 +161,7 @@ footer h3 {
 footer a {
     display: inline-block;
     text-decoration: none;
-    padding: 2% 6%;
-    margin: 2% 0 5%;
+    padding: 20px 80px;
+    margin: 20px 0 40px;
     background: rgb(255, 94, 0);
 }
