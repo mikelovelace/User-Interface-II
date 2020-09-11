@@ -26,7 +26,7 @@ html {
 }
 
 body {
-    background: #222222;
+    background: #7227FF;
     color: #eee;
     font-family: "Poppins";
 }
@@ -39,7 +39,7 @@ body {
 header {
     display: flex;
     flex-flow: column wrap;
-    background: #313131;
+    background: #1a1a1a;
     padding: 10px 20%;
 }
 
@@ -50,12 +50,13 @@ header .logo .logo-small-one , .logo-small-two {
 }
 
 header .logo .logo-small-one {
-    font-weight: 300;
+    font-weight: 100;
 }
 
 header .logo .logo-small-two {
     font-weight: 600;
     margin-left: 5px;
+    color: #DB6C41;
 }
 
 /* NAVIGATION START */
@@ -69,14 +70,14 @@ header nav a {
 }
 
 header nav a:hover {
-    background: #222;
+    background: #DB6C41;
 }
 
 /* INFO SECTION START */
 .info {
     display: flex;
     padding: 1% 20%;
-    background: #1f1f1f;
+    background: #272727;
 }
 
 section.info .right {
@@ -97,14 +98,15 @@ section.info .left {
 }
 
 section.info .left img {
-    width: 60vh;
+    width: 40vh;
+    filter: grayscale(100);
 }
 
 .right h1 {
     font-family: "Oswald";
     text-transform: uppercase;
-    font-weight: 600;
-    font-size: 3rem;
+    font-weight: 100;
+    font-size: 7rem;
 }
 
 section.info .right a {
@@ -112,7 +114,10 @@ section.info .right a {
     text-decoration: none;
     padding: 4% 15%;
     margin: 5% 0 5%;
-    background: #ff5e00;
+    background: #db6c41;
+    color: black;
+    font-size: 2rem;
+    font-weight: 400;
 }
 
 section.info .right p {
@@ -127,7 +132,7 @@ section.gallery {
     flex-flow: row wrap;
     justify-content: center;
     padding: 10px 14% 50px;
-    background: #303030;
+    background: #1a1a1a;
 }
 
 section.gallery .gallery-box {
@@ -151,7 +156,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 40px;
-    background: #1f1f1f;
+    background: #111111;
 }
 
 footer h3 {
@@ -163,5 +168,8 @@ footer a {
     text-decoration: none;
     padding: 20px 80px;
     margin: 20px 0 40px;
-    background: rgb(255, 94, 0);
+    background: #db6c41;
+    color: black;
+    font-size: 2rem;
+    font-weight: 400;
 }
