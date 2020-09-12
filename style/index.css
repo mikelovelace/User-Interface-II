@@ -26,9 +26,10 @@ html {
 }
 
 body {
-    background: #7227FF;
     color: #eee;
     font-family: "Poppins";
+    border-top: 4px solid #DB6C41;
+    border-bottom: 4px solid #DB6C41;
 }
 
 .container {
@@ -40,7 +41,7 @@ header {
     display: flex;
     flex-flow: column wrap;
     background: #1a1a1a;
-    padding: 10px 20%;
+    padding: 40px 20% 0;
 }
 
 header .logo .logo-small-one , .logo-small-two {
@@ -64,13 +65,24 @@ header nav a {
     display: inline-flex;
     flex-flow: column nowrap;
     padding: 10px 30px;
-    background: black;
+    background: #9e9e9e;
     text-decoration: none;
-    color: white;
+    color: #222;
+    margin-top: 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+header nav a:nth-child(1) {
+    border-top-left-radius: 7px;
+}
+
+header nav a:nth-child(4) {
+    border-top-right-radius: 7px;
 }
 
 header nav a:hover {
-    background: #DB6C41;
+    background: #c9c9c9;
 }
 
 /* INFO SECTION START */
@@ -95,18 +107,27 @@ section.info .left {
     flex-grow: 1;
     padding: 5% 5% 5% 0;
     align-items: center;
+    justify-content: flex-end;
 }
 
 section.info .left img {
-    width: 40vh;
+    width: 40.4vh;
     filter: grayscale(100);
 }
 
 .right h1 {
     font-family: "Oswald";
     text-transform: uppercase;
-    font-weight: 100;
+    font-weight: 400;
     font-size: 7rem;
+}
+
+.right h4 {
+    font-size: 3rem;
+    font-weight: 200;
+    margin-top: -15px;
+    letter-spacing: 4.4px;
+    color: #DB6C41;
 }
 
 section.info .right a {
@@ -118,6 +139,11 @@ section.info .right a {
     color: black;
     font-size: 2rem;
     font-weight: 400;
+    border-radius: 10px;
+}
+
+section.info .right a:hover {
+    background: #ff8248;
 }
 
 section.info .right p {
@@ -131,7 +157,7 @@ section.gallery {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    padding: 10px 14% 90px;
+    padding: 10px 14% 50px;
     background: #1a1a1a;
 }
 
@@ -156,7 +182,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 40px;
-    background: #111111;
+    background: #272727;
 }
 
 footer h3 {
@@ -169,7 +195,12 @@ footer a {
     padding: 20px 80px;
     margin: 20px 0 40px;
     background: #db6c41;
+    border-radius: 10px;
     color: black;
     font-size: 2rem;
     font-weight: 400;
+}
+
+footer a:hover {
+    background: #ff8248;
 }
