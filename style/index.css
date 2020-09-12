@@ -115,14 +115,14 @@ section.info .left img {
     filter: grayscale(100);
 }
 
-.right h1 {
+section.info .right h1 {
     font-family: "Oswald";
     text-transform: uppercase;
     font-weight: 400;
     font-size: 7rem;
 }
 
-.right h4 {
+section.info .right h4 {
     font-size: 3rem;
     font-weight: 200;
     margin-top: -15px;
@@ -147,7 +147,8 @@ section.info .right a:hover {
 }
 
 section.info .right p {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 200;
 }
 /* INFO SECTION END */
 
@@ -162,15 +163,21 @@ section.gallery {
 }
 
 section.gallery .gallery-box {
-    background: white;
     width: 270px;
     height: 220px;
     margin: 50px 10px 0;
+    animation: colors .001s infinite;
 }
 
+div.project-title {
+    background: #444;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
 div.project-title p {
     text-align: center;
-    margin: 10px;
+    color: #FFF;
+    text-transform: uppercase;
 }
 /* GALLERY END */
 
