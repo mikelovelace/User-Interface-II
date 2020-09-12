@@ -131,7 +131,7 @@ section.gallery {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    padding: 10px 14% 50px;
+    padding: 10px 14% 90px;
     background: #1a1a1a;
 }
 
