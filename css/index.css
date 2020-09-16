@@ -176,13 +176,12 @@ body p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 50%;
-  padding: 20px 0;
 }
 
 .container .info .right h1 {
@@ -233,16 +232,16 @@ body p {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 50%;
   padding: 20px 0;
 }
 
 .container .info .left img {
-  max-width: 90%;
-  padding: 0 20px 0 0;
+  max-width: 80%;
+  border-radius: 20px;
 }
 
 .container .gallery {
