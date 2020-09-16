@@ -16,7 +16,7 @@ body {
 
   header {
     @include tablet {
-        padding: 4px 0;
+      padding: 4px 0;
     }
     /* header start */
     display: flex;
@@ -25,15 +25,15 @@ body {
     padding: 40px 20% 0;
 
     .logo {
-        @include tablet {
-            justify-content: center;
-        }
+      @include tablet {
+        justify-content: center;
+      }
       /* name logo start */
       display: flex;
 
       .logo-small-one {
         @include tablet {
-            font-size: 10vw;
+          font-size: 10vw;
         }
         /* first name */
         @include logo;
@@ -41,7 +41,7 @@ body {
       }
       .logo-small-two {
         @include tablet {
-            font-size: 10vw;
+          font-size: 10vw;
         }
         /* last name */
         @include logo;
@@ -50,28 +50,63 @@ body {
       }
     }
     nav {
-        @include tablet {
-            flex-direction: column;
-        }
+      @include desktop {
+        flex-direction: row;
+      }
+      @include tablet {
+        flex-direction: column;
+      }
+      @include phone {
+        flex-direction: column;
+      }
       /* nav start */
       display: flex;
       justify-content: flex-start;
+
+      @include desktop {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        justify-content: center;
+      }
+
       @include tablet {
         width: 70%;
         margin: 0 auto;
+        padding: 0;
+        justify-content: center;
+      }
+      @include phone {
+        width: 70%;
+        margin: 0 auto;
         padding: 0 5%;
+        justify-content: center;
       }
 
       a {
         /* nav links */
+        @include desktop {
+          justify-content: center;
+          width: 100%;
+          margin: 0;
+          padding: 15px;
+          font-size: 1rem;
+        }
         @include tablet {
           justify-content: center;
+          width: 100%;
           margin: 10px 0;
           padding: 15px;
           font-size: 2rem;
         }
+        @include phone {
+          width: 70%;
+          margin: 0 auto;
+          padding: 0 5%;
+        }
+
         display: flex;
-        padding: 10px 2.5%;
+        padding: 10px 30px;
         text-align: center;
         background: $background2;
         text-decoration: none;
@@ -79,15 +114,15 @@ body {
         font-size: 1rem;
         text-transform: uppercase;
         &:first-child {
-            @include tablet {
-                border-radius: 0px;
-              }
+          @include tablet {
+            border-radius: 0px;
+          }
           border-top-left-radius: 10px;
         }
         &:last-child {
-            @include tablet {
-                border-radius: 0px;
-              }
+          @include tablet {
+            border-radius: 0px;
+          }
           border-top-right-radius: 10px;
         }
         &:hover {
@@ -98,8 +133,12 @@ body {
   }
   .info {
     @include tablet {
-        flex-direction: column;
-        padding: 0;
+      flex-direction: column;
+      padding: 0;
+    }
+    @include desktop {
+      flex-direction: column;
+      padding: 0;
     }
     /* info section */
     display: flex;
@@ -108,12 +147,18 @@ body {
     background: $background2;
 
     .right {
-        @include tablet {
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            background: $background1;
-        }
+      @include tablet {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background: $background1;
+      }
+      @include desktop {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background: $background1;
+      }
       @include flex-col;
       justify-content: center;
       flex-wrap: wrap;
@@ -129,10 +174,16 @@ body {
       }
 
       p {
+        @include desktop {
+          text-align: center;
+          padding: 0 20%;
+          font-size: 2rem;
+        }
         @include tablet {
-            text-align: center;
-            font-size: 2rem;
-          }
+          text-align: center;
+          font-size: 2rem;
+          padding: 0;
+        }
         font-size: 1.4rem;
         font-weight: map-get($weight, medium);
         text-align: justify;
@@ -165,33 +216,49 @@ body {
       }
     }
     .left {
-        @include tablet {
-            width: 100%;
-            justify-content: flex-end;
-            padding: 50px 0 0 0;
-            align-items: center;
-            background: $accent-color2;
-        }
+      @include tablet {
+        width: 100%;
+        justify-content: flex-end;
+        padding: 50px 0 0 0;
+        align-items: center;
+        background: $accent-color2;
+      }
+      @include desktop {
+        width: 100%;
+        justify-content: flex-end;
+        padding: 50px 0 0 0;
+        align-items: center;
+        background: $accent-color2;
+      }
       @include flex-col;
-      padding: 30px 30px;
+      padding: 30px 30px 0;
       width: 48%;
-      justify-content: flex-start;
+      justify-content: flex-end;
 
       img {
         @include tablet {
-            width: 70vw;
-          }
+          width: 70vw;
+        }
+
+        @include desktop {
+          width: 30vw;
+        }
         /*picture of me */
         width: 100%;
       }
     }
   }
   .gallery {
+    @include phone {
+      background: $background2;
+      padding: 10px;
+      justify-content: center;
+    }
     @include tablet {
-        background: $background2;
-        padding: 10px;
-        justify-content: center;
-      }
+      background: $background2;
+      padding: 2px;
+      justify-content: center;
+    }
     /* Gallery Section */
     display: flex;
     flex-flow: row wrap;
@@ -200,10 +267,16 @@ body {
     background: $background1;
 
     .gallery-box {
-        @include tablet {
-            width: 160px;
-            margin: 10px;
-          }
+      @include tablet {
+        width: 230px;
+        margin: 10px;
+      }
+
+      @include phone {
+        width: 160px;
+        margin: 10px;
+      }
+
       width: 270px;
       margin: 50px 10px 0;
 
@@ -212,17 +285,21 @@ body {
       }
 
       .project-image img {
+        @include phone {
+          width: 160px;
+          margin: 0;
+        }
         @include tablet {
-            width: 160px;
-            margin: 0;
-          }
+          width: 230px;
+          margin: 0;
+        }
       }
     }
 
     .project-title {
-        @include tablet {
-            background: $background1;
-          }
+      @include tablet {
+        background: $background1;
+      }
       background: $background2;
       border-bottom-left-radius: 7px;
       border-bottom-right-radius: 7px;

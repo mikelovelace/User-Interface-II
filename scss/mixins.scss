@@ -14,7 +14,8 @@
 /* media queries */
 $phone-width: 400px;
 $tablet-width: 768px;
-$desktop-width: 1000px;
+$desktop-width: 1300px;
+$large-desktop-width: 1301px;
 
 @mixin phone {
   @media (max-width: #{$phone-width}) {
@@ -29,7 +30,13 @@ $desktop-width: 1000px;
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop-width}) {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (max-width: #{$large-desktop-width}) {
     @content;
   }
 }
