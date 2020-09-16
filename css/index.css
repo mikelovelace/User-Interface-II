@@ -28,8 +28,8 @@ html {
 body {
   color: #eeeeee;
   font-family: "Poppins";
-  border-top: 4px solid #6e4bee;
-  border-bottom: 4px solid #6e4bee;
+  border-top: 4px solid #db6c41;
+  border-bottom: 4px solid #db6c41;
 }
 
 body p {
@@ -87,7 +87,7 @@ body p {
   padding: 0 3px;
   text-transform: uppercase;
   font-weight: 600;
-  color: #6e4bee;
+  color: #db6c41;
 }
 
 .container header nav {
@@ -147,7 +147,7 @@ body p {
 }
 
 .container header nav a:hover {
-  background: #6e4bee;
+  background: #db6c41;
 }
 
 .container .info {
@@ -198,7 +198,7 @@ body p {
   font-weight: 200;
   margin-top: -15px;
   letter-spacing: 4.4px;
-  color: #6e4bee;
+  color: #db6c41;
 }
 
 .container .info .right a {
@@ -211,7 +211,7 @@ body p {
   text-decoration: none;
   padding: 20px;
   margin: 30px 0 30px;
-  background: #6e4bee;
+  background: #db6c41;
   color: black;
   font-size: 2rem;
   font-weight: 400;
@@ -243,8 +243,6 @@ body p {
 .container .info .left img {
   max-width: 90%;
   padding: 0 20px 0 0;
-  -webkit-filter: grayscale(100);
-          filter: grayscale(100);
 }
 
 .container .gallery {
@@ -315,7 +313,7 @@ body p {
   text-decoration: none;
   padding: 20px 80px;
   margin: 20px 0 40px;
-  background: #6e4bee;
+  background: #db6c41;
   border-radius: 10px;
   color: black;
   font-size: 2rem;
