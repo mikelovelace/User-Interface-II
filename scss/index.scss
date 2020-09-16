@@ -10,10 +10,6 @@ body {
   font-family: "Poppins";
   border-top: 4px solid $accent-color2;
   border-bottom: 4px solid $accent-color2;
-
-  p {
-    font-size: calc(0.1rem + 1.1vw);
-  }
 }
 .container {
   margin: 0 auto;
@@ -106,6 +102,11 @@ body {
         white-space: nowrap;
       }
 
+      p {
+        font-size: calc(0.1rem + 1.1vw);
+        font-weight: map-get($weight, medium);
+      }
+
       h2 {
         font-size: calc(0.94rem + 1.1vw);
         font-weight: map-get($weight, thin);
@@ -115,6 +116,7 @@ body {
       }
 
       a {
+        /* header button */
         display: flex;
         justify-content: center;
         text-decoration: none;
@@ -140,6 +142,7 @@ body {
       padding: 20px 0;
 
       img {
+        /*picture of me */
         max-width: 80%;
         border-radius: 20px;
       }
