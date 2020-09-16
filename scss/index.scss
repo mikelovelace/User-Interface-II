@@ -15,26 +15,34 @@ body {
   margin: 0 auto;
 
   header {
-    /* header start */
-    @include phone {
-      padding: 40px 0 0;
-      align-items: center;
+    @include tablet {
+        padding: 4px 0;
     }
+    /* header start */
     display: flex;
     flex-flow: column wrap;
     background: $background1;
     padding: 40px 20% 0;
 
     .logo {
+        @include tablet {
+            justify-content: center;
+        }
       /* name logo start */
       display: flex;
 
       .logo-small-one {
+        @include tablet {
+            font-size: 10vw;
+        }
         /* first name */
         @include logo;
         font-weight: map-get($weight, thin);
       }
       .logo-small-two {
+        @include tablet {
+            font-size: 10vw;
+        }
         /* last name */
         @include logo;
         font-weight: map-get($weight, bold);
@@ -42,20 +50,23 @@ body {
       }
     }
     nav {
+        @include tablet {
+            flex-direction: column;
+        }
       /* nav start */
       display: flex;
       justify-content: flex-start;
-      @include phone {
-        width: 100%;
-        justify-content: center;
-        flex-direction: column;
+      @include tablet {
+        width: 70%;
+        margin: 0 auto;
+        padding: 0 5%;
       }
 
       a {
         /* nav links */
-        @include phone {
+        @include tablet {
           justify-content: center;
-          margin: 0px;
+          margin: 10px 0;
           padding: 15px;
           font-size: 2rem;
         }
@@ -68,9 +79,15 @@ body {
         font-size: 1rem;
         text-transform: uppercase;
         &:first-child {
+            @include tablet {
+                border-radius: 0px;
+              }
           border-top-left-radius: 10px;
         }
         &:last-child {
+            @include tablet {
+                border-radius: 0px;
+              }
           border-top-right-radius: 10px;
         }
         &:hover {
@@ -80,38 +97,51 @@ body {
     }
   }
   .info {
-    /* info section */
-    @include phone {
-      flex-direction: column;
+    @include tablet {
+        flex-direction: column;
+        padding: 0;
     }
+    /* info section */
     display: flex;
-    padding: 10px 20%;
+    justify-content: space-between;
+    padding: 0 20%;
     background: $background2;
 
     .right {
+        @include tablet {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            background: $background1;
+        }
       @include flex-col;
       justify-content: flex-start;
       flex-wrap: wrap;
-      width: 50%;
+      padding: 30px 30px;
+      width: 48%;
 
       h1 {
         font-family: "Oswald";
         text-transform: uppercase;
-        font-weight: map-get($weight, medium);
-        font-size: calc(5rem + 1.1vw);
-        white-space: nowrap;
+        font-weight: map-get($weight, bold);
+        font-size: 4.6rem;
+        line-height: 45px;
       }
 
       p {
-        font-size: calc(0.1rem + 1.1vw);
+        @include tablet {
+            text-align: center;
+            font-size: 2rem;
+          }
+        font-size: 1.4rem;
         font-weight: map-get($weight, medium);
+        text-align: justify;
       }
 
       h2 {
-        font-size: calc(0.94rem + 1.1vw);
+        font-size: 1.8rem;
         font-weight: map-get($weight, thin);
-        margin-top: -15px;
-        letter-spacing: 4.4px;
+        letter-spacing: 1px;
         color: $accent-color2;
       }
 
@@ -127,7 +157,7 @@ body {
         font-size: 2rem;
         font-weight: map-get($weight, medium);
         border-radius: 10px;
-        max-width: 250px;
+        width: 200px;
 
         &:hover {
           background: $text-color2;
@@ -135,20 +165,33 @@ body {
       }
     }
     .left {
+        @include tablet {
+            width: 100%;
+            justify-content: flex-end;
+            padding: 50px 0 0 0;
+            align-items: center;
+            background: $accent-color2;
+        }
       @include flex-col;
-      flex-wrap: nowrap;
+      padding: 30px 30px;
+      width: 48%;
       justify-content: flex-start;
-      width: 50%;
-      padding: 20px 0;
 
       img {
+        @include tablet {
+            width: 70vw;
+          }
         /*picture of me */
-        max-width: 80%;
-        border-radius: 20px;
+        width: 100%;
       }
     }
   }
   .gallery {
+    @include tablet {
+        background: $background2;
+        padding: 10px;
+        justify-content: center;
+      }
     /* Gallery Section */
     display: flex;
     flex-flow: row wrap;
@@ -157,16 +200,29 @@ body {
     background: $background1;
 
     .gallery-box {
+        @include tablet {
+            width: 160px;
+            margin: 10px;
+          }
       width: 270px;
-      height: 220px;
       margin: 50px 10px 0;
 
       &:hover {
         filter: opacity(70%);
       }
+
+      .project-image img {
+        @include tablet {
+            width: 160px;
+            margin: 0;
+          }
+      }
     }
 
     .project-title {
+        @include tablet {
+            background: $background1;
+          }
       background: $background2;
       border-bottom-left-radius: 7px;
       border-bottom-right-radius: 7px;

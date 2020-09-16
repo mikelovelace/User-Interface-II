@@ -17,13 +17,13 @@ $tablet-width: 768px;
 $desktop-width: 1000px;
 
 @mixin phone {
-  @media (max-width: #{$phone-width - 1px}) {
+  @media (max-width: #{$phone-width}) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  @media (max-width: #{$tablet-width}) {
     @content;
   }
 }
