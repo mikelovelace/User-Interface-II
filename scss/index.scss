@@ -115,7 +115,7 @@ body {
             background: $background1;
         }
       @include flex-col;
-      justify-content: flex-start;
+      justify-content: center;
       flex-wrap: wrap;
       padding: 30px 30px;
       width: 48%;
