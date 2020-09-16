@@ -280,6 +280,7 @@ body p {
 .container .gallery .project-title h4 {
   text-align: center;
   color: #eeeeee;
+  letter-spacing: 3px;
   text-transform: uppercase;
 }
 

@@ -126,9 +126,9 @@ body {
         font-weight: map-get($weight, medium);
         border-radius: 10px;
         max-width: 250px;
-        
+
         &:hover {
-            background: $text-color2;
+          background: $text-color2;
         }
       }
     }
@@ -141,11 +141,12 @@ body {
 
       img {
         max-width: 80%;
-        border-radius: 20px;;
+        border-radius: 20px;
       }
     }
   }
-  .gallery { /* Gallery Section */
+  .gallery {
+    /* Gallery Section */
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -153,25 +154,26 @@ body {
     background: $background1;
 
     .gallery-box {
-        width: 270px;
-        height: 220px;
-        margin: 50px 10px 0;
+      width: 270px;
+      height: 220px;
+      margin: 50px 10px 0;
 
-        &:hover {
-            filter: opacity(70%);
-        }
+      &:hover {
+        filter: opacity(70%);
+      }
     }
 
     .project-title {
-        background: $background2;
-        border-bottom-left-radius: 7px;
-        border-bottom-right-radius: 7px;
+      background: $background2;
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
 
-        h4 {
-            text-align: center;
-            color: $text-color1;
-            text-transform: uppercase;
-        }
+      h4 {
+        text-align: center;
+        color: $text-color1;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
     }
   }
 
@@ -184,23 +186,23 @@ body {
     background: #272727;
 
     h3 {
-        font-size: 3rem;
+      font-size: 3rem;
     }
 
     a {
-        display: flex;
-        text-decoration: none;
-        padding: 20px 80px;
-        margin: 20px 0 40px;
-        background: $accent-color2;
-        border-radius: 10px;
-        color: black;
-        font-size: 2rem;
-        font-weight: 400;
+      display: flex;
+      text-decoration: none;
+      padding: 20px 80px;
+      margin: 20px 0 40px;
+      background: $accent-color2;
+      border-radius: 10px;
+      color: black;
+      font-size: 2rem;
+      font-weight: 400;
 
-        &:hover {
-            background: $text-color2;
-        }
+      &:hover {
+        background: $text-color2;
+      }
     }
   }
 }
