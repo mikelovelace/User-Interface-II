@@ -259,6 +259,12 @@ body {
       padding: 2px;
       justify-content: center;
     }
+
+    @include desktop {
+      background: $background2;
+      padding: 2px;
+      justify-content: center;
+    }
     /* Gallery Section */
     display: flex;
     flex-flow: row wrap;
@@ -268,12 +274,7 @@ body {
 
     .gallery-box {
       @include tablet {
-        width: 230px;
-        margin: 10px;
-      }
-
-      @include phone {
-        width: 160px;
+        width: 270px;
         margin: 10px;
       }
 
@@ -286,11 +287,11 @@ body {
 
       .project-image img {
         @include phone {
-          width: 160px;
+          width: 270px;
           margin: 0;
         }
         @include tablet {
-          width: 230px;
+          width: 270px;
           margin: 0;
         }
       }
