@@ -1,0 +1,208 @@
+@import "./reset";
+@import "./mixins.scss";
+@import "./variables.scss";
+
+html {
+  font-size: 62.5%;
+}
+body {
+  color: $text-color1;
+  font-family: "Poppins";
+  border-top: 4px solid $accent-color2;
+  border-bottom: 4px solid $accent-color2;
+
+  p {
+    font-size: calc(0.1rem + 1.1vw);
+  }
+}
+.container {
+  margin: 0 auto;
+
+  header {
+    /* header start */
+    @include phone {
+      padding: 40px 0 0;
+      align-items: center;
+    }
+    display: flex;
+    flex-flow: column wrap;
+    background: $background1;
+    padding: 40px 20% 0;
+
+    .logo {
+      /* name logo start */
+      display: flex;
+
+      .logo-small-one {
+        /* first name */
+        @include logo;
+        font-weight: map-get($weight, thin);
+      }
+      .logo-small-two {
+        /* last name */
+        @include logo;
+        font-weight: map-get($weight, bold);
+        color: $accent-color2;
+      }
+    }
+    nav {
+      /* nav start */
+      display: flex;
+      justify-content: flex-start;
+      @include phone {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      a {
+        /* nav links */
+        @include phone {
+          justify-content: center;
+          margin: 0px;
+          padding: 15px;
+          font-size: 2rem;
+        }
+        display: flex;
+        padding: 10px 2.5%;
+        text-align: center;
+        background: $background2;
+        text-decoration: none;
+        color: $nav-link;
+        font-size: 1rem;
+        text-transform: uppercase;
+        &:first-child {
+          border-top-left-radius: 10px;
+        }
+        &:last-child {
+          border-top-right-radius: 10px;
+        }
+        &:hover {
+          background: $accent-color2;
+        }
+      }
+    }
+  }
+  .info {
+    /* info section */
+    @include phone {
+      flex-direction: column;
+    }
+    display: flex;
+    padding: 10px 20%;
+    background: $background2;
+
+    .right {
+      @include flex-col;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      width: 50%;
+      padding: 20px 0;
+
+      h1 {
+        font-family: "Oswald";
+        text-transform: uppercase;
+        font-weight: map-get($weight, medium);
+        font-size: calc(5rem + 1.1vw);
+        white-space: nowrap;
+      }
+
+      h2 {
+        font-size: calc(0.94rem + 1.1vw);
+        font-weight: map-get($weight, thin);
+        margin-top: -15px;
+        letter-spacing: 4.4px;
+        color: $accent-color2;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        padding: 20px;
+        margin: 30px 0 30px;
+        background: $accent-color2;
+        color: black;
+        font-size: 2rem;
+        font-weight: map-get($weight, medium);
+        border-radius: 10px;
+        max-width: 250px;
+        
+        &:hover {
+            background: $text-color2;
+        }
+      }
+    }
+    .left {
+      @include flex-col;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      width: 50%;
+      padding: 20px 0;
+
+      img {
+        max-width: 90%;
+        padding: 0 20px 0 0;
+        filter: grayscale(100);
+      }
+    }
+  }
+  .gallery { /* Gallery Section */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 10px 14% 50px;
+    background: $background1;
+
+    .gallery-box {
+        width: 270px;
+        height: 220px;
+        margin: 50px 10px 0;
+
+        &:hover {
+            filter: opacity(70%);
+        }
+    }
+
+    .project-title {
+        background: $background2;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+
+        h4 {
+            text-align: center;
+            color: $text-color1;
+            text-transform: uppercase;
+        }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: #272727;
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    a {
+        display: flex;
+        text-decoration: none;
+        padding: 20px 80px;
+        margin: 20px 0 40px;
+        background: $accent-color2;
+        border-radius: 10px;
+        color: black;
+        font-size: 2rem;
+        font-weight: 400;
+
+        &:hover {
+            background: $text-color2;
+        }
+    }
+  }
+}

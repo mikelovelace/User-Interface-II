@@ -1,0 +1,35 @@
+@mixin logo {
+  font-family: "Oswald";
+  font-size: 3rem;
+  margin-bottom: 20px;
+  padding: 0 3px;
+  text-transform: uppercase;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* media queries */
+$phone-width: 400px;
+$tablet-width: 768px;
+$desktop-width: 1000px;
+
+@mixin phone {
+  @media (max-width: #{$phone-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
