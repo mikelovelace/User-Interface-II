@@ -1,0 +1,345 @@
+@import "./reset";
+@import "./mixins.scss";
+@import "./variables.scss";
+
+html {
+  font-size: 62.5%;
+}
+body {
+  color: $text-color1;
+  font-family: "Poppins";
+  border-top: 4px solid $accent-color2;
+  border-bottom: 4px solid $accent-color2;
+}
+.container {
+  margin: 0 auto;
+
+  header {
+    @include tablet {
+      padding: 4px 0;
+    }
+    /* header start */
+    display: flex;
+    flex-flow: column wrap;
+    background: $background1;
+    padding: 40px 20% 0;
+
+    .logo {
+      @include tablet {
+        justify-content: center;
+      }
+      /* name logo start */
+      display: flex;
+
+      .logo-small-one {
+        @include tablet {
+          font-size: 10vw;
+        }
+        /* first name */
+        @include logo;
+        font-weight: map-get($weight, thin);
+      }
+      .logo-small-two {
+        @include tablet {
+          font-size: 10vw;
+        }
+        /* last name */
+        @include logo;
+        font-weight: map-get($weight, bold);
+        color: $accent-color2;
+      }
+    }
+    nav {
+      @include desktop {
+        flex-direction: row;
+      }
+      @include tablet {
+        flex-direction: column;
+      }
+      @include phone {
+        flex-direction: column;
+      }
+      /* nav start */
+      display: flex;
+      justify-content: flex-start;
+
+      @include desktop {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        justify-content: center;
+      }
+
+      @include tablet {
+        width: 70%;
+        margin: 0 auto;
+        padding: 0;
+        justify-content: center;
+      }
+      @include phone {
+        width: 70%;
+        margin: 0 auto;
+        padding: 0 5%;
+        justify-content: center;
+      }
+
+      a {
+        /* nav links */
+        @include desktop {
+          justify-content: center;
+          width: 100%;
+          margin: 0;
+          padding: 15px;
+          font-size: 1rem;
+        }
+        @include tablet {
+          justify-content: center;
+          width: 100%;
+          margin: 10px 0;
+          padding: 15px;
+          font-size: 2rem;
+        }
+        @include phone {
+          width: 70%;
+          margin: 0 auto;
+          padding: 0 5%;
+        }
+
+        display: flex;
+        padding: 10px 30px;
+        text-align: center;
+        background: $background2;
+        text-decoration: none;
+        color: $nav-link;
+        font-size: 1rem;
+        text-transform: uppercase;
+        &:first-child {
+          @include tablet {
+            border-radius: 0px;
+          }
+          border-top-left-radius: 10px;
+        }
+        &:last-child {
+          @include tablet {
+            border-radius: 0px;
+          }
+          border-top-right-radius: 10px;
+        }
+        &:hover {
+          background: $accent-color2;
+        }
+      }
+    }
+  }
+  .info {
+    @include tablet {
+      flex-direction: column;
+      padding: 0;
+    }
+    @include desktop {
+      flex-direction: column;
+      padding: 0;
+    }
+    /* info section */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20%;
+    background: $background2;
+
+    .right {
+      @include tablet {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background: $background1;
+      }
+      @include desktop {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background: $background1;
+      }
+      @include flex-col;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 30px 30px;
+      width: 48%;
+
+      h1 {
+        font-family: "Oswald";
+        text-transform: uppercase;
+        font-weight: map-get($weight, bold);
+        font-size: 4.6rem;
+        line-height: 45px;
+      }
+
+      p {
+        @include desktop {
+          text-align: center;
+          padding: 0 20%;
+          font-size: 2rem;
+        }
+        @include tablet {
+          text-align: center;
+          font-size: 2rem;
+          padding: 0;
+        }
+        font-size: 1.4rem;
+        font-weight: map-get($weight, medium);
+        text-align: justify;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        font-weight: map-get($weight, thin);
+        letter-spacing: 1px;
+        color: $accent-color2;
+      }
+
+      a {
+        /* header button */
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        padding: 20px;
+        margin: 30px 0 30px;
+        background: $accent-color2;
+        color: black;
+        font-size: 2rem;
+        font-weight: map-get($weight, medium);
+        border-radius: 10px;
+        width: 200px;
+
+        &:hover {
+          background: $text-color2;
+        }
+      }
+    }
+    .left {
+      @include tablet {
+        width: 100%;
+        justify-content: flex-end;
+        padding: 50px 0 0 0;
+        align-items: center;
+        background: $accent-color2;
+      }
+      @include desktop {
+        width: 100%;
+        justify-content: flex-end;
+        padding: 50px 0 0 0;
+        align-items: center;
+        background: $accent-color2;
+      }
+      @include flex-col;
+      padding: 30px 30px 0;
+      width: 48%;
+      justify-content: flex-end;
+
+      img {
+        @include tablet {
+          width: 70vw;
+        }
+
+        @include desktop {
+          width: 30vw;
+        }
+        /*picture of me */
+        width: 100%;
+      }
+    }
+  }
+  .gallery {
+    @include phone {
+      background: $background2;
+      padding: 10px;
+      justify-content: center;
+    }
+    @include tablet {
+      background: $background2;
+      padding: 2px;
+      justify-content: center;
+    }
+
+    @include desktop {
+      background: $background2;
+      padding: 2px;
+      justify-content: center;
+    }
+    /* Gallery Section */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 10px 14% 50px;
+    background: $background1;
+
+    .gallery-box {
+      @include tablet {
+        width: 270px;
+        margin: 10px;
+      }
+
+      width: 270px;
+      margin: 50px 10px 0;
+
+      &:hover {
+        filter: opacity(70%);
+      }
+
+      .project-image img {
+        @include phone {
+          width: 270px;
+          margin: 0;
+        }
+        @include tablet {
+          width: 270px;
+          margin: 0;
+        }
+      }
+    }
+
+    .project-title {
+      @include tablet {
+        background: $background1;
+      }
+      background: $background2;
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+
+      h4 {
+        text-align: center;
+        color: $text-color1;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: #272727;
+
+    h3 {
+      font-size: 3rem;
+    }
+
+    a {
+      display: flex;
+      text-decoration: none;
+      padding: 20px 80px;
+      margin: 20px 0 40px;
+      background: $accent-color2;
+      border-radius: 10px;
+      color: black;
+      font-size: 2rem;
+      font-weight: 400;
+
+      &:hover {
+        background: $text-color2;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@mixin logo {
+  font-family: "Oswald";
+  font-size: 3rem;
+  margin-bottom: 20px;
+  padding: 0 3px;
+  text-transform: uppercase;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* media queries */
+$phone-width: 400px;
+$tablet-width: 768px;
+$desktop-width: 1300px;
+$large-desktop-width: 1301px;
+
+@mixin phone {
+  @media (max-width: #{$phone-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (max-width: #{$large-desktop-width}) {
+    @content;
+  }
+}
